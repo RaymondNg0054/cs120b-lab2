@@ -17,14 +17,9 @@ int main(void) {
 	DDRA = 0x00; PORTA = 0xFF;
 	DDRB = 0XFF; PORTB = 0x00;
 
-	unsigned char PA1 = 0x00;
-	unsigned char PA0 = 0x00;
-	unsigned char PB0 = 0x00;
     /* Insert your solution below */
     while (1) {
-	if (PA0 == 0x01 && PA1 ==0x00) {
-		PB0 = 0x01;	
-	}
-    }
+	    
+	    }
     return 1;
 }
