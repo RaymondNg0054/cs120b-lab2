@@ -1,7 +1,7 @@
 /*	Author: rng016
  *  Partner(s) Name
  *	Lab Section: 22
- *	Assignment: Lab #  Exercise #
+ *	Assignment: Lab #2  Exercise #1
  *	Exercise Description: [optional - include for your own benefit]
  *
  *	I acknowledge all content contained herein, excluding template or example
@@ -17,19 +17,14 @@ int main(void) {
 	DDRA = 0x00; PORTA = 0xFF;
 	DDRB = 0XFF; PORTB = 0x00;
 
-	unsigned char tmpB = 0x00;
-	unsigned char tmpA = 0x00;
-
+	unsigned char PA1 = 0x00;
+	unsigned char PA0 = 0x00;
+	unsigned char PAB = 0x00;
     /* Insert your solution below */
     while (1) {
-	tmpA = PINA & 0x01;
-	if (tmpA == 0x01) {
-		tmpB = (tmpB & 0xFC) | 0x01;
+	if (PA0 == 0x01 && PA1 ==0x00) {
+		PB0 = 0x01;	
 	}
-	else {
-		tmpB = (tmpB & 0xFC) | 0x02;
-	}
-	PORTB = tmpB;
     }
     return 1;
 }
